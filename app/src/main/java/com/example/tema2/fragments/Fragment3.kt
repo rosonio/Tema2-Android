@@ -1,4 +1,4 @@
-package Fragments
+package com.example.tema2.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -35,7 +35,7 @@ class Fragment3 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_3, container, false)
+        return inflater.inflate(R.layout.fragment_6, container, false)
     }
 
     companion object {
