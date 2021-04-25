@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_cell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellow"
+    android:clickable="true"
+    android:focusable="auto"
+    android:padding="@dimen/default_space"
+    >
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="@dimen/default_space"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toStartOf="@id/imv_user_cell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User's name" />
+
+    <TextView
+        android:id="@+id/user_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_space"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="@dimen/default_space"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_text_size"
+        app:layout_constraintEnd_toStartOf="@id/imv_user_cell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        tools:text="User's info" />
+
+    <ImageView
+        android:id="@+id/imv_user_cell"
+        android:layout_width="@dimen/image_dimen"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:onClick="arrow_click"
+        android:src="@drawable/white_arrow"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintStart_toEndOf="@id/user_info"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintBottom_toTopOf="@id/user_info"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/posts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_info"
+        android:padding="@dimen/padding"
+        >
+        <TextView
+            android:id="@+id/postsTextView"
+            android:background="@color/purple_200"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="@dimen/body_text_size"
+            android:visibility="visible"
+            android:text="Posts"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
